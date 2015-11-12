@@ -1,0 +1,79 @@
+[LOG 0.9.1]:
+- [Fix] Plugin don't display "You have not permission"
+- [Fix] Block prisoner-spawn don't disapear when delete jail
+- [Fix] FATAL : File reset when reload server
+- [Fix] Length jail protection is too small
+
+[LOG 1.0.0]:
+=== [LOG 1.0.0] ===
+- [Update] Update to CraftBukkit-1.5.1-R0.1
+- [Fix] Console bugs when run commands
+- [Fix] Some text errors
+- [Fix] Removed log on console
+- [Fix] Bug loop when jail is full of blocks
+- [Fix] /jw-clean : bug without arg
+- [Fix] /jw-player : bug with just three args
+- [Fix] Conflict when two players create a prison at the same time
+
+- [Add] /jw-free <player> [reason] : frees a player with optional reason
+- [Add] /jw-goto <jail> : teleports you to the spawn area of the prison
+- [Add] /jw-give <player> <item> Gives item tool to prisoner
+- [Add] /jw-whitecmd <add/del/list> <command> : add a command to whitelist
+- [Add] /jw-reload : reload all configuration files
+- [Add] /jw-increase <player> <nbr> [reason] : increases the punishment of a prisoner of <nbr> blocks
+
+- [Add] Multi-permissions gesture (jailworker.*, jailworker.modo)
+- [Add] Special permission "jailworker.boss" (see below)
+- [Add] Protect the spawn area
+- [Add] Choice of type of block that appear (Sand, Dirt, Stone, Obsidian)
+- [Add] Commands whitelist : allowed commands for prisoners (config.yml)
+- [Add] Auto update config.yml & jails.yml for new versions of plugin
+- [Add] Jails owners can redefine it simply by using /jw-setjail, /jw-setspawn and /jw-save <same_name> (you can give permission to redefine all jail with "jailworker.boss")
+- [Add] Only the owner can delete prisons (or player with permission "jailworker.boss")
+- [Add] Increase punishment if trying to escape!
+- [Add] Prohibition to put blocks in prisons (unless you are the owner or have permission "jailworker.boss")
+- [Add] When prisoner die, return to prison
+- [Add] Clean code
+
+=== [BUGS] ===
+- /!\ It's possible that the server freeze if you use a block limit greater than the volume of the prison /!\
+- Bugs with snow on blocks, be careful, don't build open-jail where snow can follow (will be fix)
+
+[LOG 1.1.0]:
+=== [LOG 1.1.0] ===
+- [Add] Language gesture : language.yml
+- [Fix] Bug sometime when break block on jail
+
+[LOG 1.2.0]:
+== [LOG 1.2.0] ==
+- [Add] New lines on config file, you can config prisoners speak and ear, permission to allow all commands on jail : jailworker.jw-cmdsonjail
+- [Fix] Somes text error
+
+[LOG 1.2.1]:
+== [LOG 1.2.1] ==
+- [Fix] Remove duplicate line on language.yml (info-listener-notowner)
+
+=======================================================:
+
+[TODO FOR 2.0.0]:
+Ne pas oublier de mettre a jour le README
+
+- [Add] Recode JailSystem to optimize and prevent server crash @done
+- [Add] Now you can use WorldEdit selection! @done
+- [Add] /jw-manageowners <add/remove/list> <jail_name> <username1> [username2] [usernameX] @done
+- [Add] GUI jail config with sign (userfriendly choose config in sign) @done
+- [Add] Can choose language in config.yml @done
+- [Add] Command gesture by console : Free, Give, Increase, Info, JailPlayer, List, OwnerManager, Reload, Restart, Start, Stop, WhiteCmd, delete, Clean @toTest
+
+- [Permissions] Now you just can interact with you own jail(s) @done
+- [Permissions] New node "jailworker.jw-admin" to interact with all jails @done
+
+- [Fix] Change prisoner gamemode when send creative player in jail  instead of display error @done
+- [Fix] All text rewriten
+- [Fix] You can remove some lines on language.yml if you don't want output for action @done
+- [Fix] WhiteListedCmds are ordered  @done
+- [Fix] Remove duplicate on WhiteListedCmds @done
+- [Fix] WhiteListedCmds accepte multiple commands to add and remove @done
+- [Fix] Remove multiple whitespace on text in languages.yml @done
+
+- [Remove] Boss node @done
